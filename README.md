@@ -52,3 +52,24 @@ CROS POLICY:
 </CORSRule>
 </CORSConfiguration>
 ```
+
+
+You also need to Add Inline Policy in the IAM user Permission thing :
+
+```
+{
+   "Version": "2012-10-17",
+   "Statement": [
+      {
+         "Sid": "PermissionForObjectOperations",
+         "Effect": "Allow",
+         "Action": [
+            "s3:PutObject"
+         ],
+         "Resource": [
+            "arn:aws:s3:::awsexamplebucket1/*"
+         ]
+      }
+   ]
+}
+```
