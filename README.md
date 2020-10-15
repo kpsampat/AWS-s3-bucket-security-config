@@ -18,6 +18,7 @@ Follow the steps :
 Bucket Permissions (inside a specific bucket) ==>  Block all public Access ==> Bucket Policy ( Add the below thing ) ==> CROS POLICY
 
 Bucket Policy:
+```
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -35,9 +36,10 @@ Bucket Policy:
         }
     ]
 }
-
+```
 CROS POLICY:
 
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
 <CORSRule>
@@ -49,4 +51,4 @@ CROS POLICY:
     <AllowedHeader>*</AllowedHeader>
 </CORSRule>
 </CORSConfiguration>
-
+```
